@@ -30,4 +30,8 @@ total 64
 -rw-------  1 nmasse  wheel  1704 Mar 26 10:58 server.key
 -rw-r--r--  1 nmasse  wheel  3927 Mar 26 10:58 server.p12
 -rw-r--r--  1 nmasse  wheel  1466 Mar 26 10:58 truststore.jks
+
+$ openssl x509 -noout -text -in /tmp/certs/server.crt |grep -A1 'X509v3 Subject Alternative Name'
+            X509v3 Subject Alternative Name: 
+                DNS:localhost.localdomain, DNS:localhost
 ```
