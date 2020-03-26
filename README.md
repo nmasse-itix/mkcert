@@ -35,3 +35,17 @@ $ openssl x509 -noout -text -in /tmp/certs/server.crt |grep -A1 'X509v3 Subject 
             X509v3 Subject Alternative Name: 
                 DNS:localhost.localdomain, DNS:localhost
 ```
+
+## Environment variables
+
+**SERVER_HOSTNAMES**
+
+- the hostnames to include in the certificate (list of hostnames separated by a space)
+- default value: `docker.for.mac.localhost docker.for.win.localhost localhost localhost.localdomain`
+
+**JKS_PASSWORD**
+
+- the password used to protect the JKS store and keys
+- default value: `super-secret`
+
+**Note:** the password protecting the PKCS#12 is hardcoded to `changeit` !
