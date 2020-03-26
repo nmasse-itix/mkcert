@@ -14,10 +14,7 @@ This repository provides a dockerfile and a helper script to:
 ## Usage
 
 ```sh
-git clone https://github.com/nmasse-itix/mkcert
-cd mkcert
-docker build . -t mkcert:dev
-docker run -v /tmp/certs:/certs -e SERVER_HOSTNAMES="localhost.localdomain localhost" -it mkcert:dev
+docker run -v /tmp/certs:/certs -e SERVER_HOSTNAMES="localhost.localdomain localhost" -it nmasse/mkcert:latest
 ```
 
 ```
