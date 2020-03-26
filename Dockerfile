@@ -6,7 +6,8 @@ RUN curl -L -o /usr/local/bin/mkcert https://github.com/FiloSottile/mkcert/relea
 
 ADD run.sh /usr/local/bin/run.sh
 
-ENV PATH="/usr/local/bin:${PATH}" \
+ENV CAROOT="/certs" \
+    PATH="/usr/local/bin:${PATH}" \
     TRUST_STORES="" \
     JKS_PASSWORD="super-secret" \
     SERVER_HOSTNAMES="docker.for.mac.localhost docker.for.win.localhost localhost localhost.localdomain"
